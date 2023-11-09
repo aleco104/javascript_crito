@@ -1,0 +1,15 @@
+.news-page-grid {
+  padding-top: 12px;
+  padding-bottom: 0;
+}
+.news-page-grid h2 {
+  margin-bottom: 40px;
+}
+.news-page-grid .site-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news-page-grid .site-number img {
+  margin-top: 70px;
+}
