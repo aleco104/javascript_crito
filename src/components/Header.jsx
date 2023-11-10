@@ -1,6 +1,8 @@
 import React from 'react';
 import logotype from '../assets/images/Logo.svg';
 import { NavLink, Link } from 'react-router-dom';
+import Button from '../generics/Button';
+
 
 const Header = () => {
   return (
@@ -40,13 +42,14 @@ const Header = () => {
                             <NavLink to="/contact">Contact</NavLink>
                         </nav>
                     </div>
-                    <div className="login" >
-                        <Link to="/login" className="btn-yellow">Login<i className="fa-regular fa-arrow-up-right"></i></Link>    
+                    <div className="login">
+                        <Button color="yellow" text="Login" url="/login"/>
                     </div>
+                    
                 </div>
             </div>
             <button className="bar">
-                <Link to="#"><i className="fa-regular fa-bars"></i></Link>    
+                <Link to="#"><i className="fa-regular fa-bars"></i></Link>
             </button>
         </div>
     </header>

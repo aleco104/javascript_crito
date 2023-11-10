@@ -2,6 +2,7 @@ import React from 'react';
 import aboutCompany from '../assets/images/about-company.png';
 import companyFidelidutt from '../assets/images/company-fidelidutt.svg';
 import { Link } from 'react-router-dom';
+import Button from '../generics/Button';
 
 const AboutCompany = () => {
   return (
@@ -25,7 +26,7 @@ const AboutCompany = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officiis quas assumenda esse obcaecati? Ex esse error voluptates iure vel totam eos.<br/><br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis esse quasi incidunt adipisci accusantium libero provident voluptate amet.</p>
                 </div>
                 <div className="company-right-bottom">
-                    <Link to="/contact" className="btn-black">Learn More<i className="fa-regular fa-arrow-up-right"></i></Link>
+                    <Button color="black" text="Learn More" url="/learnmore"/>
                     <Link to="/video" className="video-link">
                         <div className="video-btn"><i className="fa-sharp fa-solid fa-play"></i></div>
                         <span>Intro Video</span>

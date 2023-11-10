@@ -1,6 +1,6 @@
 import React from 'react'
 import ServicesBox from './ServicesBox'
-import { Link } from 'react-router-dom'
+import Button from '../generics/Button'
 
 const OurServices = () => {
   return (
@@ -17,7 +17,7 @@ const OurServices = () => {
                     <ServicesBox heading="Risk Management" text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus."/> 
                 </div>
                 <div className="services-btn">
-                    <Link to="/contact" className="btn-transparent">Browse Services<i className="fa-regular fa-arrow-up-right"></i></Link>
+                    <Button color="black" text="Browse Services" url="/contact"/>
                 </div>
             </div>
         </section>

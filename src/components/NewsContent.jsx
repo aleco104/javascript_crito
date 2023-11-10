@@ -29,7 +29,7 @@ const NewsContent = ({id}) => {
                 <div className="news-content-left">
                     <img src={article.imageUrl} />
                     <p>{article.content}</p>
-                    <div className="news-category-btn">
+                    <div className="news-category-box">
                         <p>{article.category}</p>
                     </div>
                 </div>

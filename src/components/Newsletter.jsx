@@ -1,6 +1,6 @@
 import React from 'react'
 import element from '../assets/images/Element.svg'
-import { Link } from 'react-router-dom'
+import Button from '../generics/Button'
 
 const Newsletter = () => {
   return (
@@ -11,7 +11,7 @@ const Newsletter = () => {
                 <form id="newletterForm" method="post">
                     <input type="email" placeholder="username@domain.com" />
                     <div className="newsletter-subscribe">
-                        <Link to="/subscribe"><button className="btn-yellow">Subscribe <i className="fa-solid fa-arrow-up-right"></i></button></Link>
+                        <Button color="yellow" text="Subscribe" url="/subscribe"/> 
                     </div>
                 </form>
             </div>

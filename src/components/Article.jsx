@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import articleNewsCarousel from '../assets/images/article-news-carousel.svg'
 import ArticleBox from '../components/ArticleBox'
-import { Link } from 'react-router-dom'
+import Button from '../generics/Button'
 
 const Article = ({backgroundColor}) => {
 
@@ -28,10 +28,9 @@ const Article = ({backgroundColor}) => {
                         <h2>Get Every Single Articles & News</h2>
                     </div>
                     <div className="article-top-right">
-                        <Link to="/news" className="btn-white">Browse Articles<i className="fa-regular fa-arrow-up-right"></i></Link>
+                        <Button color="white" text="Browse Articles" url="/news"/> 
                     </div>
                 </div>
-
                 <div className="article-bottom">
                     <div className="article-bottom-boxes">
                         {

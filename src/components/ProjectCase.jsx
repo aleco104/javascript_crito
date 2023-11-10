@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCaseBox from './ProjectCaseBox';
-import { Link } from 'react-router-dom';
+import Button from '../generics/Button';
 
 const ProjectCase = () => {
   return (
@@ -17,7 +17,7 @@ const ProjectCase = () => {
                 <ProjectCaseBox title="Business Insights is an important piece of your business" image="src/assets/images/article-image4.png" imageAlt="a laptop showing economic analysis"/>
             </div>
             <div className="project-btn">
-                <Link className="btn-black" to="/projects">All Recent Projects<i className="fa-regular fa-arrow-up-right"></i></Link>  
+                <Button color="black" text="All Recent Projects" url="/projects"/> 
             </div>
         </div>
     </section>

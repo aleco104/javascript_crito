@@ -1,40 +1,14 @@
 import React from 'react'
-import contactUs1 from '../assets/images/contact-us1.svg'
-import contactUs2 from '../assets/images/contact-us2.svg'
-import contactUs3 from '../assets/images/contact-us3.svg'
+import ContactUsBox from './ContactUsBox'
 
 const ContactUs = () => {
   return (
     <section className="contact-us">
             <div className="container">
                 <div className="contact-us-boxes">
-                    <div className="contact-us-box">
-                        <a href="#">
-                            <img src={contactUs1} alt="" />
-                        </a>
-                        <div className="box-text">
-                            <h3>Visit us</h3>
-                            <p>Sveavägen 31<br/>111 34 STOCKHOLM</p>
-                        </div>
-                    </div>
-                    <div className="contact-us-box">
-                        <a href="#">
-                            <img src={contactUs2} alt="" />
-                        </a>
-                        <div className="box-text">
-                            <h3>Call us</h3>
-                            <p>+46 (8) 121 470 50<br/>+46 (8) 121 470 51</p>
-                        </div>
-                    </div>
-                    <div className="contact-us-box">
-                        <a href="#">
-                            <img src={contactUs3} alt="" />
-                        </a>
-                        <div className="box-text">
-                            <h3>Email us</h3>
-                            <p>info@crito.com<br/>support@crito.com</p>
-                        </div>
-                    </div>
+                    <ContactUsBox title="Visit us" text1="Sveavägen 31" text2="111 34 STOCKHOLM" image="src/assets/images/contact-us1.svg" />
+                    <ContactUsBox title="Call us" text1="+46 (8) 121 470 50" text2="+46 (8) 121 470 51" image="src/assets/images/contact-us2.svg" />
+                    <ContactUsBox title="Email us" text1="info@crito.com" text2="support@crito.com" image="src/assets/images/contact-us3.svg" />
                 </div>
             </div>
         </section>

@@ -1,6 +1,7 @@
 import React from 'react';
 import FeaturesBox from './FeaturesBox';
 import { Link } from 'react-router-dom';
+import Button from '../generics/Button';
 
 const Features = () => {
   return (
@@ -11,7 +12,7 @@ const Features = () => {
                 <h6>Features</h6>
                 <h2>Our Accounting is trusted by thousand of companies</h2>
                 <div className="features-left-btn">
-                    <Link to="/features" className="btn-yellow">Learn More<i className="fa-regular fa-arrow-up-right"></i></Link>
+                    <Button color="yellow" text="Learn More" url="/learnmore"/>
                 </div>
             </div>
             <div className="section-right">

@@ -1,7 +1,7 @@
 import React from 'react'
 import MeetTeamBox from './MeetTeamBox'
 import meetCarousel from '../assets/images/meet-carousel.svg'
-import { Link } from 'react-router-dom'
+import Button from '../generics/Button'
 
 
 const MeetTeam = () => {
@@ -14,7 +14,7 @@ const MeetTeam = () => {
                     <h2>Experience Team Members</h2>
                 </div>
                 <div className="meet-team-btn">
-                    <Link to="/ourteam" className="btn-yellow">Browse Team<i className="fa-regular fa-arrow-up-right"></i></Link>
+                    <Button color="yellow" text="Browse Team" url="/ourteam"/> 
                 </div>
             </div>
             <div className="meet-team-bottom">

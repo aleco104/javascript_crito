@@ -1,7 +1,7 @@
 import React from 'react'
 import backgroundWaves from '../assets/images/Rectangle 607.svg'
 import manShowcase from '../assets/images/man-showcase.png'
-import { Link } from 'react-router-dom'
+import Button from '../generics/Button'
 
 const Showcase = () => {
   return (
@@ -12,8 +12,8 @@ const Showcase = () => {
                 <h1>We Provide The Best Business Solutions</h1>
                 <p>Establish your vision and value proposition and turn them into testable prototypes.</p>
                 <div className="buttons">
-                    <Link className="btn-yellow" to="/contact">Get Consulting<i className="fa-regular fa-arrow-up-right"></i></Link>
-                    <Link className="btn-transparent" to="/learnmore">Learn More<i className="fa-regular fa-arrow-up-right"></i></Link>
+                    <Button color="yellow" text="Get Consulting" url="/contact"/>
+                    <Button color="transparent" text="Learn More" url="/learnmore"/>
                 </div>           
             </div>
             <img src={manShowcase} alt="image of a man in a suit with a tablet" />

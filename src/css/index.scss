@@ -1414,7 +1414,7 @@ main {
                         text-decoration: none;
                     }
 
-                    .article-bottom-box {
+                    .article-bottom-box { 
                         width: min(430px, 90vw);
 
                         .img-yellow-box {
@@ -1431,6 +1431,11 @@ main {
                                 margin-bottom: 24px;
                                 max-width: 85vw;
                                 width: 100%;
+                                transition: filter ease-in-out 0.15s;
+
+                                &:hover {
+                                    filter: brightness(75%);
+                                }
                             }
                             
                             .yellow-box {
@@ -1460,9 +1465,7 @@ main {
                         p {
                             line-height: 28px;
                         }
-
-                    }
-                   
+                    }  
                 }
 
                 .article-bottom-carousel {

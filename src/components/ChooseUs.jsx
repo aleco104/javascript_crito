@@ -4,7 +4,7 @@ import ChooseUsBox from './ChooseUsBox';
 
 const ChooseUs = () => {
   return (
-    <section className="choose-us">
+    <section className="choose-us"> 
         <div className="container">
             <div className="choose-us-titles">
                 <h6>Why Choose Us</h6>

@@ -17,7 +17,6 @@ const NewsPageGrid = () => {
         if (result.status === 200)
             setArticleData(await result.json())  
     }
-    
 
   return (
     <section className="news-page-grid article">

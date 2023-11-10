@@ -1322,6 +1322,10 @@ main .article .container .article-bottom .article-bottom-boxes .article-bottom-b
   margin-bottom: 24px;
   max-width: 85vw;
   width: 100%;
+  transition: filter ease-in-out 0.15s;
+}
+main .article .container .article-bottom .article-bottom-boxes .article-bottom-box .img-yellow-box img:hover {
+  filter: brightness(75%);
 }
 main .article .container .article-bottom .article-bottom-boxes .article-bottom-box .img-yellow-box .yellow-box {
   height: 64px;

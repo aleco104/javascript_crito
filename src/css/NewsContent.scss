@@ -36,6 +36,20 @@
             p {
                 margin-top: 50px;
                 color: #5E5E5E;
+                line-height: 28px;
+            }
+
+            .news-category-box {
+                display: flex;
+                justify-content: start;
+                
+                p {
+                    padding: 10px 50px;
+                    background-color: #F3F3F3;
+                    border-radius: 30px;
+                    font-weight: 500;
+                }
+
             }
         }
 
@@ -93,7 +107,7 @@
                     }
 
                     p {
-                        font-weight: 600;
+                        font-weight: 700;
                     }
 
                     .post-details-date {
@@ -107,7 +121,7 @@
                 padding: 48px 41px;
                 
                 p {
-                    font-weight: 600;
+                    font-weight: 700;
                 }
 
                 span {
