@@ -24,7 +24,7 @@ const MeetTeam = () => {
                     <MeetTeamBox name="Kimberly Hansen" profession="Senior Consultant" image="src/assets/images/meet-team3.png" imageAlt="Kimberly Hansen"/>
                     <MeetTeamBox name="Justin Willoman" profession="Senior Tech Consultant" image="src/assets/images/meet-team4.png" imageAlt="Justin Willoman"/>
                 </div>   
-                <div class="meet-team-carousel">
+                <div className="meet-team-carousel">
                     <img src={meetCarousel} alt="" />
                 </div>
             </div>

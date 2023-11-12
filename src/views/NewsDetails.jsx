@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom'
 import '../css/News.css'
 import NewsContent from '../components/NewsContent'
 
-const NewsDetails = () => {
+const NewsDetails = () => { 
   const { id } = useParams() //extraherar parametern 
 
   return (

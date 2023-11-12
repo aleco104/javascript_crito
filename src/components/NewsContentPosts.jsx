@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react'
+import { useArticle } from './ArticleContext'
 
 const NewsContentPosts = () => {
-    const [articleData, setArticleData] = useState([])
+    // const [articleData, setArticleData] = useState([])
 
-    useEffect(() => {
-        getArticles()
-    }, [])
+    const {articleData}  = useArticle()
 
-    const getArticles = async() => {
-        const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles?take=4')
 
-        if (result.status === 200){
-            setArticleData(await result.json())
-        }
-    }
+    // useEffect(() => {
+    //     getArticles()
+    // }, [])
+
+    // const getArticles = async() => {
+    //     const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles?take=4')
+
+    //     if (result.status === 200){
+    //         setArticleData(await result.json())
+    //     }
+    // }
 
     return (
         <div className="news-content-posts">
@@ -23,10 +27,10 @@ const NewsContentPosts = () => {
 
             {
             articleData.map((article, index) => (
-            <div className="post-details" id={`post${index}`}>
+            index <= 3 ? <div className="post-details" id={`post${index}`} key={article.id}>
                 <p>{article.title}</p>
                 <p className="post-details-date"> {new Date(article.published).toLocaleDateString('en-GB', {month: 'short'})} {new Date(article.published).toLocaleDateString('en-GB', {day: 'numeric'})}, {new Date(article.published).toLocaleDateString('en-GB', {year: 'numeric'})} </p>
-            </div>   
+            </div> : null   
             ))
             }
         </div>

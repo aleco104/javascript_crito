@@ -2,22 +2,26 @@ import React, { useState, useEffect } from 'react'
 import articleNewsCarousel from '../assets/images/article-news-carousel.svg'
 import ArticleBox from '../components/ArticleBox'
 import Button from '../generics/Button'
+import { useArticle } from './ArticleContext'
 
 const Article = ({backgroundColor}) => {
 
-    const [articleData, setArticleData] = useState([]) //lagrar informationen
+    const {articleData}  = useArticle()
 
-    useEffect(() => { //kör ut informationen
-        getArticles()
-    }, [])
+    // const [articleData, setArticleData] = useState([]) //lagrar informationen
 
-    const getArticles = async () => { //hämtar ut information från API
+    // useEffect(() => { //kör ut informationen
+    //     getArticles()
+    // }, [])
 
-        const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles?take=3')
+    // const getArticles = async () => { //hämtar ut information från API
 
-        if (result.status === 200)
-            setArticleData(await result.json())
-    }
+    //     const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles?take=3')
+
+    //     if (result.status === 200)
+    //         setArticleData(await result.json())
+    // }
+    
 
     return (
         <section className={`article ${backgroundColor}`}>
@@ -34,8 +38,8 @@ const Article = ({backgroundColor}) => {
                 <div className="article-bottom">
                     <div className="article-bottom-boxes">
                         {
-                            articleData.map((article) => (
-                                <ArticleBox key={article.id} title={article.title} text={article.content} date={new Date(article.published).toLocaleDateString('en-GB', {day: 'numeric'})} month={new Date(article.published).toLocaleDateString('en-GB', {month: 'short'})} image={article.imageUrl} imageAlt="article image" category={article.category} URL={`/newsdetails/${article.id}`} />    
+                            articleData.map((article, index) => (
+                                index <=2 ? <ArticleBox key={article.id} title={article.title} text={article.content} date={new Date(article.published).toLocaleDateString('en-GB', {day: 'numeric'})} month={new Date(article.published).toLocaleDateString('en-GB', {month: 'short'})} image={article.imageUrl} imageAlt="article image" category={article.category} URL={`/newsdetails/${article.id}`} /> : null    
                             )) 
                         }
                     </div>

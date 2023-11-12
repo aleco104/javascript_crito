@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import NewsContentPosts from './NewsContentPosts'
 import '../css/NewsContent.css'
+import { useArticle } from './ArticleContext'
 
 const NewsContent = ({id}) => {
 
-    const [article, setArticle] = useState({}) //lagrar informationen
+    const {article, getArticle} = useArticle()
 
-    const getArticle = async () => { //hämtar informationen
-      const result = await fetch(`https://win23-assignment.azurewebsites.net/api/articles/${id}`)
-      setArticle(await result.json())
-    }
+    useEffect(() => {
+        getArticle(id)
+    }, [id])
+
+    // const [article, setArticle] = useState({}) //lagrar informationen
+
+    // const getArticle = async () => { //hämtar informationen
+    //   const result = await fetch(`https://win23-assignment.azurewebsites.net/api/articles/${id}`)
+    //   setArticle(await result.json())
+    // }
   
-    useEffect(() => {getArticle()}, [id]) //kör informationen när sidan renderas (och vid ID-byte om man skriver in ID inom [])
+    // useEffect(() => {getArticle()}, [id]) //kör informationen när sidan renderas (och vid ID-byte om man skriver in ID inom [])
 
     return (
         <section className="news-content">

@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import ArticleBox from './ArticleBox'
 import siteNumber from '../assets/images/Pagination.png'
+import { useArticle } from './ArticleContext'
 
 const NewsPageGrid = () => {
 
-    const [articleData, setArticleData] = useState([]) 
+    const {articleData} = useArticle()
 
-    useEffect(() => { 
-        getArticles()
-    }, [])
+    // useEffect(() => { 
+    //     getArticles()
+    // }, [])
 
-    const getArticles = async () => { 
+    // const getArticles = async () => { 
+    //     const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles?take=9')
 
-        const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles?take=9')
-
-        if (result.status === 200)
-            setArticleData(await result.json())  
-    }
+    //     if (result.status === 200)
+    //         setArticleData(await result.json())  
+    // }
 
   return (
     <section className="news-page-grid article">
@@ -25,9 +25,10 @@ const NewsPageGrid = () => {
             <div className="article-bottom">
                 <div className="article-bottom-boxes">
                 {
-                    articleData.map((article) => (
-                        <ArticleBox key={article.id} title={article.title} text={article.content} date={new Date(article.published).toLocaleDateString('en-GB', {day: 'numeric'})} month={new Date(article.published).toLocaleDateString('en-GB', {month: 'short'})} image={article.imageUrl} imageAlt="article image" category={article.category} URL={`/newsdetails/${article.id}`} />        
-                    ))
+                    articleData.map((article, index) => (
+                        index <= 8 ? <ArticleBox key={article.id} title={article.title} text={article.content} date={new Date(article.published).toLocaleDateString('en-GB', {day: 'numeric'})} month={new Date(article.published).toLocaleDateString('en-GB', {month: 'short'})} image={article.imageUrl} imageAlt="article image" category={article.category} URL={`/newsdetails/${article.id}`} /> : null
+                        
+                        ))
                 }
                 </div>
             </div>
