@@ -20,10 +20,9 @@ export const ArticleProvider = ({children}) => {
 
     const getArticle = async (id) => { //hämtar informationen
         const result = await fetch(`https://win23-assignment.azurewebsites.net/api/articles/${id}`)
-        setArticle(await result.json())
+        if (result.status === 200)
+            setArticle(await result.json())
     }
-
-
 
     return (
         <ArticleContext.Provider value={{articleData, article, getArticles, getArticle}}>

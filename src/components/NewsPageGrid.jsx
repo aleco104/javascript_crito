@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import ArticleBox from './ArticleBox'
 import siteNumber from '../assets/images/Pagination.png'
 import { useArticle } from './ArticleContext'
@@ -6,17 +6,6 @@ import { useArticle } from './ArticleContext'
 const NewsPageGrid = () => {
 
     const {articleData} = useArticle()
-
-    // useEffect(() => { 
-    //     getArticles()
-    // }, [])
-
-    // const getArticles = async () => { 
-    //     const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles?take=9')
-
-    //     if (result.status === 200)
-    //         setArticleData(await result.json())  
-    // }
 
   return (
     <section className="news-page-grid article">

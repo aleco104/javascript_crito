@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import articleNewsCarousel from '../assets/images/article-news-carousel.svg'
 import ArticleBox from '../components/ArticleBox'
 import Button from '../generics/Button'
@@ -7,22 +7,7 @@ import { useArticle } from './ArticleContext'
 const Article = ({backgroundColor}) => {
 
     const {articleData}  = useArticle()
-
-    // const [articleData, setArticleData] = useState([]) //lagrar informationen
-
-    // useEffect(() => { //kör ut informationen
-    //     getArticles()
-    // }, [])
-
-    // const getArticles = async () => { //hämtar ut information från API
-
-    //     const result = await fetch('https://win23-assignment.azurewebsites.net/api/articles?take=3')
-
-    //     if (result.status === 200)
-    //         setArticleData(await result.json())
-    // }
     
-
     return (
         <section className={`article ${backgroundColor}`}>
             <div className="container">
@@ -43,13 +28,10 @@ const Article = ({backgroundColor}) => {
                             )) 
                         }
                     </div>
-
                     <div className="article-bottom-carousel">
                         <img src={articleNewsCarousel} alt="" />
                     </div>
                 </div>
-
-
             </div>
         </section>
     )
