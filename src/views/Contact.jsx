@@ -6,7 +6,7 @@ import LeaveMessage from '../components/LeaveMessage'
 import CritoMap from '../components/CritoMap'
 import Footer from '../components/Footer'
 
-const Contact = () => {
+const Contact = () => { 
   return (
     <>
       <Header/>

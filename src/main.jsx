@@ -9,12 +9,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NewsDetails from './views/NewsDetails'
 import ScrollToTop from './utils/ScrollToTop'
 import { ArticleProvider } from './components/ArticleContext'
+import { ToastContainer } from 'react-toastify'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter> 
       <ArticleProvider>
         <ScrollToTop/>
+        <ToastContainer/>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/contact' element={<Contact/>} />
