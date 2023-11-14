@@ -48,16 +48,20 @@ const LeaveMessage = () => {
   })
 
   return (
-    <section class="leave-message">
-      <div class="container">
+    <section className="leave-message">
+      <div className="container">
           <h2>Leave us a message<br/>for any information.</h2>
           <form noValidate id="leave-message-form" onSubmit={messageForm.handleSubmit}>
-              <input type="text" id="messageName" name="name" title="Name" placeholder="Name*" tabindex="1" value={messageForm.values.name} onChange={messageForm.handleChange} /> 
-              {messageForm.errors.name && messageForm.touched.name ? <div>{messageForm.errors.name}</div> : null}
-              <input type="email" id="messageMail" name="email" title="Email" placeholder="Email*" tabindex="2" value={messageForm.values.email} onChange={messageForm.handleChange} />
-              {messageForm.errors.email && messageForm.touched.name ? <div>{messageForm.errors.email}</div> : null}
-              <textarea id="message" name="message" placeholder="Your Message*" tabindex="3" value={messageForm.values.message} onChange={messageForm.handleChange}></textarea>
-              {messageForm.errors.message && messageForm.touched.name ? <div>{messageForm.errors.message}</div> : null}
+
+              <input className={messageForm.errors.name && messageForm.touched.name ? 'error' : ''} type="text" id="messageName" name="name" title="Name" placeholder="Name*" tabindex="1" value={messageForm.values.name} onChange={messageForm.handleChange} /> 
+              {messageForm.errors.name && messageForm.touched.name ? <div className="error-message">{messageForm.errors.name}</div> : null}
+
+              <input className={messageForm.errors.email && messageForm.touched.email ? 'error' : ''} type="email" id="messageMail" name="email" title="Email" placeholder="Email*" tabindex="2" value={messageForm.values.email} onChange={messageForm.handleChange} />
+              {messageForm.errors.email && messageForm.touched.name ? <div className="error-message">{messageForm.errors.email}</div> : null}
+
+              <textarea className={messageForm.errors.message && messageForm.touched.message ? 'error' : ''} id="message" name="message" placeholder="Your Message*" tabindex="3" value={messageForm.values.message} onChange={messageForm.handleChange}></textarea>
+              {messageForm.errors.message && messageForm.touched.name ? <div className="error-message">{messageForm.errors.message}</div> : null}
+
               <button type="submit" class="btn-yellow">Send Message<i class="fa-regular fa-arrow-up-right"></i></button>
           </form>   
       </div>

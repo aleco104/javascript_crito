@@ -1,5 +1,6 @@
 import React from 'react'
 import rectangle607 from '../assets/images/Rectangle 607.svg'
+import { Link } from 'react-router-dom'
 
 const LetsConnect = () => {
   return (
@@ -7,7 +8,7 @@ const LetsConnect = () => {
             <div className="container">
                 <div className="header-titles">
                     <div className="header-title-top">
-                        <a href="index.html">Home</a>
+                        <Link to="/">Home</Link>
                         <p>Contact</p>
                     </div>
                     <div className="header-title">

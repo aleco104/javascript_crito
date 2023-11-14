@@ -9,7 +9,7 @@ const NewsContent = ({id}) => {
 
     useEffect(() => {
         getArticle(id)
-    }, [id])
+    }, [id]) 
 
     return (
         <section className="news-content">

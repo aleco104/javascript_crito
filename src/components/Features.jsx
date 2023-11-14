@@ -1,6 +1,5 @@
 import React from 'react';
 import FeaturesBox from './FeaturesBox';
-import { Link } from 'react-router-dom';
 import Button from '../generics/Button';
 
 const Features = () => {

@@ -21,7 +21,7 @@ const Article = ({backgroundColor}) => {
                     </div>
                 </div>
                 <div className="article-bottom">
-                    <div className="article-bottom-boxes">
+                    <div className="article-bottom-boxes"> 
                         {
                             articleData.map((article, index) => (
                                 index <=2 ? <ArticleBox key={article.id} title={article.title} text={article.content} date={new Date(article.published).toLocaleDateString('en-GB', {day: 'numeric'})} month={new Date(article.published).toLocaleDateString('en-GB', {month: 'short'})} image={article.imageUrl} imageAlt="article image" category={article.category} URL={`/newsdetails/${article.id}`} /> : null    

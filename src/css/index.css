@@ -1315,6 +1315,7 @@ main .article .container .article-bottom .article-bottom-boxes .article-bottom-b
   justify-content: start;
   align-items: center;
   width: 420px;
+  max-width: calc(100vw - 40px);
   height: 230px;
   overflow: hidden;
 }
@@ -1755,12 +1756,27 @@ main .leave-message .container form {
     width: 1021px;
   }
 }
+main .leave-message .container form .error {
+  border: 2px solid #C02B0A;
+  background-color: #f2e1dd;
+}
+main .leave-message .container form .error::placeholder {
+  color: #C02B0A;
+}
+main .leave-message .container form .error-message {
+  color: #C02B0A;
+  font-weight: 400;
+  margin-top: -10px;
+  margin-left: 36px;
+  padding-bottom: 20px;
+}
 main .leave-message .container form input {
   border: none;
   height: 56px;
   border-radius: 28px;
   padding-left: 35px;
   color: #8B8B8B;
+  outline: none;
 }
 main .leave-message .container form textarea {
   height: 160px;
@@ -1770,6 +1786,7 @@ main .leave-message .container form textarea {
   padding-top: 18px;
   padding-left: 35px;
   color: #8B8B8B;
+  outline: none;
 }
 main .leave-message .container form button {
   border: none;
@@ -1780,5 +1797,29 @@ main .leave-message .container form button {
 }
 main .crito-map {
   background-color: #0E1021;
-  color: rgb(250, 204, 212);
+}
+
+.page-not-found {
+  background-color: #F0EFE9;
+}
+.page-not-found .not-found-text {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page-not-found .not-found-text h2 {
+  color: #191919;
+}
+.page-not-found .image-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.page-not-found .image-not-found img {
+  width: 55%;
 }
