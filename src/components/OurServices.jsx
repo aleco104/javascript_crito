@@ -3,8 +3,8 @@ import ServicesBox from './ServicesBox'
 import Button from '../generics/Button'
 
 const OurServices = () => {
-  return (
-    <section className="our-services">
+    return (
+        <section className="our-services">
             <div className="container">
                 <div className="services-titles">
                     <h6>Our Services</h6>
@@ -21,7 +21,7 @@ const OurServices = () => {
                 </div>
             </div>
         </section>
-  )
+    )
 }
 
 export default OurServices

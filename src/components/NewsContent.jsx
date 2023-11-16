@@ -4,7 +4,6 @@ import '../css/NewsContent.css'
 import { useArticle } from './ArticleContext'
 
 const NewsContent = ({id}) => {
-
     const {article, getArticle} = useArticle()
 
     useEffect(() => {

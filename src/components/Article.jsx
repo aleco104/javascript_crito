@@ -5,7 +5,6 @@ import Button from '../generics/Button'
 import { useArticle } from './ArticleContext'
 
 const Article = ({backgroundColor}) => {
-
     const {articleData}  = useArticle()
     
     return (

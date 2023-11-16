@@ -8,7 +8,7 @@ import '../css/News.css'
 import NewsContent from '../components/NewsContent'
 
 const NewsDetails = () => { 
-  const { id } = useParams() //extraherar parametern 
+  const { id } = useParams() 
 
   return (
     <>
@@ -20,7 +20,6 @@ const NewsDetails = () => {
       </main>
       <Footer/>
     </>
-
   )
 }
 

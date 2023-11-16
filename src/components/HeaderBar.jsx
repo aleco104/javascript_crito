@@ -12,21 +12,17 @@ const HeaderBar = () => {
             <NavLink to="/news">News</NavLink>
             <NavLink to="/contact">Contact</NavLink>
         </nav>
-        
         <div className="bar-contacts">
             <div className="bar-contact-title">Contact</div>
             <div className="bar-contact-box">
                 <div><i className="fa-regular fa-phone-volume"></i>+46 (8) 121 470 50</div>
             </div>
-          
             <div className="bar-contact-box"> 
                 <div><i className="fa-regular fa-envelope"></i>info@crito.com</div>
             </div>
-
             <div className="bar-contact-box-last">
                 <div><i className="fa-regular fa-location-dot"></i>Sveavägen 31, 111 34 STOCKHOLM</div>
             </div>
-
             <div className="socialmedia">
                 <a href="https://facebook.com/" target="_blank"><i className="fa-brands fa-facebook"></i></a>
                 <a href="https://twitter.com/" target="_blank"><i className="fa-brands fa-x-twitter"></i></a>
@@ -37,8 +33,6 @@ const HeaderBar = () => {
                 <Button color="yellow" text="Login" url="/login"/>
             </div>
         </div>
-
-
     </div>
   )
 }

@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 import Button from '../generics/Button';
 import HeaderBar from './HeaderBar';
 
-
 const Header = () => {
     const [headerBarVisible, setHeaderBarVisible] = useState(false);
 
@@ -48,20 +47,13 @@ const Header = () => {
                     <div className="login">
                         <Button color="yellow" text="Login" url="/login"/>
                     </div>
-                    
                 </div>
             </div>
-
             <button className="bar" onClick={() => setHeaderBarVisible(!headerBarVisible)}>
                 {headerBarVisible ? <i className="fa-solid fa-xmark fa-xl"></i> : <i className="fa-solid fa-bars-staggered"></i> }
             </button>
-
         </div>
-        
-        {headerBarVisible?
-        <HeaderBar/>    
-        :
-        ''}
+        {headerBarVisible? <HeaderBar/> : ''}
     </header>
   )
 }

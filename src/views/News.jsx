@@ -6,7 +6,6 @@ import Newsletter from '../components/Newsletter'
 import NewsPageGrid from '../components/NewsPageGrid'
 import '../css/News.css'
 
-
 const News = () => {
   return (
     <>

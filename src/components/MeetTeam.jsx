@@ -3,7 +3,6 @@ import MeetTeamBox from './MeetTeamBox'
 import meetCarousel from '../assets/images/meet-carousel.svg'
 import Button from '../generics/Button'
 
-
 const MeetTeam = () => {
   return (
     <section className="meet-team">
@@ -30,7 +29,6 @@ const MeetTeam = () => {
             </div>
         </div>
     </section>
-
   )
 }
 
