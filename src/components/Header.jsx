@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logotype from '../assets/images/Logo.svg';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Button from '../generics/Button';
+import HeaderBar from './HeaderBar';
 
 
 const Header = () => {
+    const [headerBarVisible, setHeaderBarVisible] = useState(false);
+
   return (
     <header>
         <div className="container">
@@ -48,10 +51,17 @@ const Header = () => {
                     
                 </div>
             </div>
-            <button className="bar">
-                <Link to="#"><i className="fa-regular fa-bars"></i></Link>
+
+            <button className="bar" onClick={() => setHeaderBarVisible(!headerBarVisible)}>
+                {headerBarVisible ? <i className="fa-solid fa-xmark fa-xl"></i> : <i className="fa-solid fa-bars-staggered"></i> }
             </button>
+
         </div>
+        
+        {headerBarVisible?
+        <HeaderBar/>    
+        :
+        ''}
     </header>
   )
 }
