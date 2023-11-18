@@ -5,7 +5,6 @@ import customer3 from '../assets/images/customer3.svg'
 import customer4 from '../assets/images/customer4.svg'
 import customer5 from '../assets/images/customer5.svg'
 
-
 const Customers = () => {
   return (
     <section className="customers">

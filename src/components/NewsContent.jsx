@@ -39,12 +39,12 @@ const NewsContent = ({id}) => {
                     <div className="news-categories">
                         <h3><span>Cat</span>egories</h3>
                         <div className="news-categories-content">
-                            <p>Technology <span>- 20 Posts</span></p>
-                            <p>Freelancing <span>- 07 Posts</span></p>
-                            <p>Writing <span>- 16 Posts</span></p>
-                            <p>Marketing <span>- 11 Posts</span></p>
-                            <p>Business <span>- 35 Posts</span></p>
-                            <p>Education <span>- 14 Posts</span></p>
+                            <p>Technology -<span> 20 Posts</span></p>
+                            <p>Freelancing -<span> 07 Posts</span></p>
+                            <p>Writing -<span> 16 Posts</span></p>
+                            <p>Marketing -<span> 11 Posts</span></p>
+                            <p>Business -<span> 35 Posts</span></p>
+                            <p>Education -<span> 14 Posts</span></p> 
                         </div>
                     </div>
                 </div>

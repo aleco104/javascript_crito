@@ -126,10 +126,11 @@
 }
 .news-content .container .news-content-right .news-categories {
   border: 1px solid #D1D1D1;
-  padding: 48px 41px;
+  padding: 45px 41px 30px 41px;
 }
 .news-content .container .news-content-right .news-categories p {
   font-weight: 700;
+  margin-bottom: 8px;
 }
 .news-content .container .news-content-right .news-categories span {
   border-bottom: 2px solid #191919;
@@ -137,7 +138,12 @@
 .news-content .container .news-content-right .news-categories .news-categories-content {
   margin-top: 30px;
 }
+.news-content .container .news-content-right .news-categories .news-categories-content p {
+  font-weight: 700;
+  color: #191919;
+}
 .news-content .container .news-content-right .news-categories .news-categories-content span {
-  font-weight: 400;
+  font-weight: 700;
+  color: #757575;
   border-bottom: none;
 }

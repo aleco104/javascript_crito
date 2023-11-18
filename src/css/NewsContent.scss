@@ -74,7 +74,6 @@
                 display: grid;
                 grid-area: right;
             }
-           
 
             .news-content-searchfield {
                 margin-bottom: 40px;
@@ -148,10 +147,11 @@
 
             .news-categories {
                 border: 1px solid #D1D1D1;
-                padding: 48px 41px;
+                padding: 45px 41px 30px 41px;
                 
                 p {
-                    font-weight: 700;
+                    font-weight: 700; 
+                    margin-bottom: 8px;
                 }
 
                 span {
@@ -160,9 +160,15 @@
 
                 .news-categories-content {
                     margin-top: 30px;
-
+                
+                    p {
+                        font-weight: 700;
+                        color: #191919;
+                    }
+                    
                     span {
-                        font-weight: 400;
+                        font-weight: 700;
+                        color: #757575;
                         border-bottom: none;
                     }
                 }  
